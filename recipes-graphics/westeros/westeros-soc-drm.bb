@@ -18,6 +18,9 @@ CFLAGS_remove_rpi = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', '-D
 
 CFLAGS_append_rpi = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', ' -DDRM_NO_NATIVE_FENCE', '', d)}"
 
+CFLAGS_remove_mx8 = "-DWESTEROS_GL_NO_PLANES"
+CFLAGS_append_mx8 = " -DDRM_NO_NATIVE_FENCE"
+
 SECURITY_CFLAGS_remove = "-fpie"
 SECURITY_CFLAGS_remove = "-pie"
 
