@@ -8,14 +8,12 @@ PV = "3.0+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 SRC_URI = "git://github.com/WebPlatformForEmbedded/WPEFramework.git;protocol=git;branch=master \
-           file://0002-CppParser-Python2-Python3-conversion.patch \
-           file://0003-JsonGenerator-Python2-Python3-conversion.patch  \
-           file://0004-StubGenerator-Python2-Python3-conversion.patch  \
+           file://0001-python-tools-python-2to3-conversion.patch \
           "
 SRC_URI[md5sum] = "42b518b9ccd6852d1d709749bc96cb70"
 SRC_URI[sha256sum] = "f3c45b121cf6257eafabdc3a8008763aed1cd7da06dbabc59a9e4d2a5e4e6697"
 
-SRCREV = "9629e13e398f1bd5c869f9c3c01bce0021604eee"
+SRCREV = "21eb30e5fe54275ae9aff2d8c51ba5dc21e2135b"
 
 inherit cmake pkgconfig native python3native
 
